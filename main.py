@@ -1,7 +1,7 @@
 import pandas as pd
 import quandl, math
 import numpy as np
-from sklearn import preprocessing, cross_validation, svm
+from sklearn import preprocessing, model_selection, svm
 from sklearn.linear_model import LinearRegression
 
 df = quandl.get('WIKI/GOOGL')
@@ -16,6 +16,6 @@ forecast_col = 'Adj. Close'
 df.fillna(-90909090, inplace=True)
 
 forecast_out = int(math.ceil(0.01 * len(df)))
-df['label'] = df[forecast_col].shift(-forecast_out)
+df['label'] = df[forecast_col].shift(forecast_out)
 df.dropna(inplace=True)
 print(df.head())
