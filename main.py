@@ -1,6 +1,7 @@
 import pandas as pd
-import quandl
-import math
+import quandl, math
+import numpy as np
+from sklearn import preprocessing
 
 df = quandl.get('WIKI/GOOGL')
 
