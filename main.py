@@ -13,4 +13,7 @@ df = df[['Adj. Close', 'HL_PCT', 'PCT_change', 'Adj. Volume']]
 forecast_col = 'Adj. Close'
 df.fillna(-90909090, inplace=True)
 
-forecast_out = int(math.ceil(0.1 * len(df)))
+forecast_out = int(math.ceil(0.01 * len(df)))
+df['label'] = df[forecast_col].shift(-forecast_out)
+df.dropna(inplace=True)
+print(df.head())
