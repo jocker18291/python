@@ -21,3 +21,5 @@ df.dropna(inplace=True)
 
 X = np.array(df.drop(['label'], axis=1))
 y = np.array(df['label'])
+
+X=preprocessing.scale(X)
