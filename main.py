@@ -1,5 +1,6 @@
 import pandas as pd
 import quandl
+import math
 
 df = quandl.get('WIKI/GOOGL')
 
