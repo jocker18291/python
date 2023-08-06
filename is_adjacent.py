@@ -15,3 +15,4 @@ matrix = np.array([
 ])
 node1 = int(input("Enter the first node: "))
 node2 = int(input("Enter the second node: "))
+print(is_adjacent(matrix, node1, node2))
