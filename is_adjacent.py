@@ -1,3 +1,7 @@
+#For two nodes in a graph to be considered adjacent to one another
+#there must be an edge between them. In the example given
+#nodes 0 and 1 are adjacent, but nodes 0 and 2 are not.
+
 import numpy as np
 
 def is_adjacent(matrix, node1, node2):
