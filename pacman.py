@@ -12,8 +12,8 @@ font = pygame.font.Font('freesansbold.ttf', 20)
 level = boards
 
 def draw_board(lvl):
-    num1 = ((height - 50) / 32)
-    num2 = (width / 30)
+    num1 = ((height - 50) // 32)
+    num2 = (width // 30)
 
 run = True
 while run:
