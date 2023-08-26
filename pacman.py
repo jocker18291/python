@@ -9,11 +9,17 @@ screen = pygame.display.set_mode([width, height])
 timer = pygame.time.Clock()
 fps = 60
 font = pygame.font.Font('freesansbold.ttf', 20)
+level = boards
+
+def draw_board(lvl):
+    num1 = ((height - 50) / 32)
+    num2 = (width / 30)
 
 run = True
 while run:
     timer.tick(fps)
     screen.fill('black')
+    draw_board(level)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
