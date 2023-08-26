@@ -16,7 +16,10 @@ def draw_board(level):
     num2 = (width // 30)
     for i in range(len(level)):
         for j in range(len(level[i])):
-
+            if level[i][j] == 1:
+                pygame.draw.circle(screen, 'white', (j * num2 + (0.5 * num2)), (i * num1 + (0.5 * num1)), 4)
+            if level[i][j] == 2:
+                pygame.draw.circle(screen, 'white', (j * num2 + (0.5 * num2)), (i * num1 + (0.5 * num1)), 10)
 
 run = True
 while run:
