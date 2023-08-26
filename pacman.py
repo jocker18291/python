@@ -11,9 +11,12 @@ fps = 60
 font = pygame.font.Font('freesansbold.ttf', 20)
 level = boards
 
-def draw_board(lvl):
+def draw_board(level):
     num1 = ((height - 50) // 32)
     num2 = (width // 30)
+    for i in range(len(level)):
+        for j in range(len(level[i])):
+
 
 run = True
 while run:
