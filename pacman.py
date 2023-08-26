@@ -20,6 +20,8 @@ def draw_board(level):
                 pygame.draw.circle(screen, 'white', (j * num2 + (0.5 * num2), i * num1 + (0.5 * num1)), 4)
             if level[i][j] == 2:
                 pygame.draw.circle(screen, 'white', (j * num2 + (0.5 * num2), i * num1 + (0.5 * num1)), 10)
+            if level[i][j] == 3:
+                pygame.draw.line(screen, 'blue', (j * num2 + (0.5 * num2), i * num1), (j * num2 + (0.5 * num2), (i + 1) * num1), 2)
 
 run = True
 while run:
