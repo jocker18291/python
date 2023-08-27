@@ -33,6 +33,8 @@ def draw_board(level):
                 pygame.draw.arc(screen, 'blue', pygame.Rect(j * num2 + (num2 * 0.5), i * num1 - (0.5 * num1), num2, num1), pi, 1.5 * pi, 3)
             if level[i][j] == 8:
                 pygame.draw.arc(screen, 'blue', pygame.Rect(j * num2 - (num2 * 0.5), i * num1 - (0.5 * num1), num2, num1), 1.5 * pi, 0, 3)
+            if level[i][j] == 9:
+                pygame.draw.line(screen, 'white', (j * num2, i * num1 + (0.5 * num1)), ((j + 1) * num2, i * num1 + (0.5 * num1)), 3)
 run = True
 while run:
     timer.tick(fps)
