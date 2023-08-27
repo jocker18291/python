@@ -13,7 +13,7 @@ font = pygame.font.Font('freesansbold.ttf', 20)
 level = boards
 player_images = []
 for i in range(1, 5):
-    player_images.append(pygame.transform.scale(pygame.image.load(f'player_images/{i}.png')))
+    player_images.append(pygame.transform.scale(pygame.image.load(f'player_images/{i}.png'), (45, 45)))
 
 def draw_board(level):
     num1 = ((height - 50) // 32)
