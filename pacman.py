@@ -1,5 +1,6 @@
 import pygame
 from board import boards
+from math import pi
 
 pygame.init()
 
@@ -24,7 +25,8 @@ def draw_board(level):
                 pygame.draw.line(screen, 'blue', (j * num2 + (0.5 * num2), i * num1), (j * num2 + (0.5 * num2), (i + 1) * num1), 2)
             if level[i][j] == 4:
                 pygame.draw.line(screen, 'blue', (j * num2, i * num1 + (0.5 * num1)), ((j + 1) * num2, i * num1 + (0.5 * num1)), 2)
-
+            if level[i][j] == 5:
+                pygame.draw.arc(screen, 'blue', pygame.Rect(j * num2, i * num1 + int(0.5 * num1), 0.5 * num2, 0.5 * num1), 0, 0.5 * pi, 2)
 run = True
 while run:
     timer.tick(fps)
